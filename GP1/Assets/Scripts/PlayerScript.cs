@@ -22,7 +22,5 @@ public class PlayerScript : MonoBehaviour
         float verMovement= Input.GetAxis("Vertical");
 
         rd2d.AddForce(new Vector2(hozMovement*speed, verMovement*speed));
-
-        if()
     }
 }
