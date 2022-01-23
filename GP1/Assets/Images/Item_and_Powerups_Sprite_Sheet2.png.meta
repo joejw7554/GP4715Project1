@@ -1,0 +1,372 @@
+fileFormatVersion: 2
+guid: 3f20c60a4499f5f48871b705e0da6845
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1562048561306664360
+    second: Item_and_Powerups_Sprite_Sheet2_0
+  - first:
+      213: 2039629417267513101
+    second: Item_and_Powerups_Sprite_Sheet2_1
+  - first:
+      213: 3696453745513087808
+    second: Item_and_Powerups_Sprite_Sheet2_2
+  - first:
+      213: 3230619992120223651
+    second: Item_and_Powerups_Sprite_Sheet2_3
+  - first:
+      213: -7094333716278535332
+    second: Item_and_Powerups_Sprite_Sheet2_4
+  - first:
+      213: -4741434359100434337
+    second: Item_and_Powerups_Sprite_Sheet2_5
+  - first:
+      213: 1672616760429982327
+    second: Item_and_Powerups_Sprite_Sheet2_6
+  - first:
+      213: -6033055325216038416
+    second: Item_and_Powerups_Sprite_Sheet2_7
+  - first:
+      213: -4060030229624060797
+    second: Item_and_Powerups_Sprite_Sheet2_8
+  - first:
+      213: -8709627404170996128
+    second: Item_and_Powerups_Sprite_Sheet2_9
+  - first:
+      213: -9021358559050454418
+    second: Item_and_Powerups_Sprite_Sheet2_10
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Item_and_Powerups_Sprite_Sheet2_0
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 905
+        width: 109
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 852086d0c1d725ae0800000000000000
+      internalID: -1562048561306664360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Item_and_Powerups_Sprite_Sheet2_1
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 896
+        width: 280
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d07caa906283e4c10800000000000000
+      internalID: 2039629417267513101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Item_and_Powerups_Sprite_Sheet2_2
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 897
+        width: 280
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04348fdc8117c4330800000000000000
+      internalID: 3696453745513087808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Item_and_Powerups_Sprite_Sheet2_3
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 589
+        width: 260
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a7e99a24c775dc20800000000000000
+      internalID: 3230619992120223651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Item_and_Powerups_Sprite_Sheet2_4
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 590
+        width: 260
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5b142b821ddb8d90800000000000000
+      internalID: -7094333716278535332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Item_and_Powerups_Sprite_Sheet2_5
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 584
+        width: 260
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f589cf3529a033eb0800000000000000
+      internalID: -4741434359100434337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Item_and_Powerups_Sprite_Sheet2_6
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 297
+        width: 280
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7723bcae414563710800000000000000
+      internalID: 1672616760429982327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Item_and_Powerups_Sprite_Sheet2_7
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 294
+        width: 280
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f1283e6528464ca0800000000000000
+      internalID: -6033055325216038416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Item_and_Powerups_Sprite_Sheet2_8
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 294
+        width: 280
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38409e16400e7a7c0800000000000000
+      internalID: -4060030229624060797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Item_and_Powerups_Sprite_Sheet2_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 28
+        width: 280
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06651608500312780800000000000000
+      internalID: -8709627404170996128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Item_and_Powerups_Sprite_Sheet2_10
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 14
+        width: 285
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6a2e501032bdc280800000000000000
+      internalID: -9021358559050454418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
