@@ -6,7 +6,7 @@ public class PlayerScript : MonoBehaviour
 {
     // Start is called before the first frame update
     public float speed;
-    public int JumpPower=1250;
+    public int JumpPower;
     private bool facingRight= true;
     private float hozMove;
     void Start()

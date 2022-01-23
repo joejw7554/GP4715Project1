@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dcf1ee0c224fedb40a3bfac7b39e0331
+guid: 99f0165fc04eab84ab5a7f6fa2b16595
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -144,7 +144,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 867
-        width: 287
+        width: 260
         height: 285
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -163,9 +163,9 @@ TextureImporter:
       name: Mario_Sprite_Sheet1_1
       rect:
         serializedVersion: 2
-        x: 287
+        x: 293
         y: 867
-        width: 287
+        width: 260
         height: 285
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -184,9 +184,9 @@ TextureImporter:
       name: Mario_Sprite_Sheet1_2
       rect:
         serializedVersion: 2
-        x: 574
+        x: 573
         y: 867
-        width: 287
+        width: 260
         height: 285
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -205,9 +205,9 @@ TextureImporter:
       name: Mario_Sprite_Sheet1_3
       rect:
         serializedVersion: 2
-        x: 861
+        x: 873
         y: 867
-        width: 287
+        width: 260
         height: 285
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -227,8 +227,8 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 582
-        width: 287
+        y: 583
+        width: 260
         height: 285
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -247,9 +247,9 @@ TextureImporter:
       name: Mario_Sprite_Sheet1_5
       rect:
         serializedVersion: 2
-        x: 287
+        x: 280
         y: 582
-        width: 287
+        width: 260
         height: 285
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -268,9 +268,9 @@ TextureImporter:
       name: Mario_Sprite_Sheet1_6
       rect:
         serializedVersion: 2
-        x: 574
+        x: 577
         y: 582
-        width: 287
+        width: 260
         height: 285
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -289,9 +289,9 @@ TextureImporter:
       name: Mario_Sprite_Sheet1_7
       rect:
         serializedVersion: 2
-        x: 861
-        y: 582
-        width: 287
+        x: 872
+        y: 581
+        width: 260
         height: 285
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -312,7 +312,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 297
-        width: 287
+        width: 260
         height: 285
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -331,9 +331,9 @@ TextureImporter:
       name: Mario_Sprite_Sheet1_9
       rect:
         serializedVersion: 2
-        x: 287
-        y: 297
-        width: 287
+        x: 295
+        y: 298
+        width: 260
         height: 285
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -353,8 +353,8 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 574
-        y: 297
-        width: 287
+        y: 294
+        width: 260
         height: 285
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -373,9 +373,9 @@ TextureImporter:
       name: Mario_Sprite_Sheet1_11
       rect:
         serializedVersion: 2
-        x: 861
-        y: 297
-        width: 287
+        x: 867
+        y: 293
+        width: 260
         height: 285
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -396,7 +396,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 12
-        width: 287
+        width: 260
         height: 285
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -415,9 +415,9 @@ TextureImporter:
       name: Mario_Sprite_Sheet1_13
       rect:
         serializedVersion: 2
-        x: 287
+        x: 294
         y: 12
-        width: 287
+        width: 260
         height: 285
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -436,9 +436,9 @@ TextureImporter:
       name: Mario_Sprite_Sheet1_14
       rect:
         serializedVersion: 2
-        x: 574
-        y: 12
-        width: 287
+        x: 562
+        y: 8
+        width: 260
         height: 285
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -457,9 +457,9 @@ TextureImporter:
       name: Mario_Sprite_Sheet1_15
       rect:
         serializedVersion: 2
-        x: 861
+        x: 780
         y: 12
-        width: 287
+        width: 260
         height: 285
       alignment: 0
       pivot: {x: 0, y: 0}
