@@ -15,7 +15,7 @@ public class EnemyScript : MonoBehaviour
         RaycastHit2D hit=Physics2D.Raycast (transform.position, new Vector2(hozMove,0));
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2 (hozMove,0)* enemySpeed;
 
-        if(hit.distance <0.5f)
+        if(hit.distance <0.7f)
         {
             Flip();
         }

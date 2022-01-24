@@ -2,16 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerScore : MonoBehaviour
 {
     private float timeLeft= 120;
     public int playerScore=0;
+    public GameObject timeUI;
+    public GameObject playerScoreUI;
+
 
     void Update()
     {
-        //Debug.Log (timeLeft);
         timeLeft-=Time.deltaTime;
+        timeUI.gameObject.GetComponent<Text>().text=("Time: "+ (int)timeLeft);
+        playerScoreUI.gameObject.GetComponent<Text>().text=("Score:"+ playerScore);
 
         if(timeLeft<0.1f)
         {
@@ -19,15 +24,22 @@ public class PlayerScore : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D (Collider2D collision)
+    void OnTriggerEnter2D (Collider2D trig)
     {
-        //Debug.Log("Touched");
-        CountScore();
+        if(trig.gameObject.name =="EndLevel")
+        {
+            CountScore();
+        }
+
+        if(trig.gameObject.name =="Coin")
+        {
+            playerScore+=10;
+            Destroy(trig.gameObject);
+        }
     }
 
     void CountScore()
     {
         playerScore = playerScore + (int)(timeLeft*10);
-        Debug.Log (playerScore);
     }
 }
