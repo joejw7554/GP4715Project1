@@ -10,8 +10,6 @@ public class PlayerScript : MonoBehaviour
     private float hozMove;
     public bool isGrounded;
 
-    bool jump=false;
-
     public Animator animator;
 
 
@@ -22,6 +20,7 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         PlayerMove();
+        PlayerRaycast();
     }
 
     void PlayerMove()
@@ -65,12 +64,35 @@ public class PlayerScript : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        //Debug.Log("Player has collided with" + collision.collider.name);
 
-        if(collision.gameObject.tag=="ground")
+    }
+
+    void PlayerRaycast ()
+    {
+        //Todo Fix 
+        RaycastHit2D rayUp=Physics2D.Raycast (transform.position, Vector2.up);
+        if(rayUp !=null && rayUp.collider != null && rayUp.distance < 0.9f && rayUp.collider.name=="Randombox")
+        {
+            Destroy(rayUp.collider.gameObject);
+
+        }
+
+
+        RaycastHit2D rayDown=Physics2D.Raycast (transform.position, Vector2.down);
+
+        if(rayDown !=null && rayDown.collider != null && rayDown.distance < 0.9f && rayDown.collider.tag=="enemy")
+        {
+            GetComponent<Rigidbody2D>().AddForce (Vector2.up* 3);
+            rayDown.collider.gameObject.GetComponent<Rigidbody2D>().AddForce (Vector2.right * 200);
+            rayDown.collider.gameObject.GetComponent<Rigidbody2D>().gravityScale=8;
+            rayDown.collider.gameObject.GetComponent<Rigidbody2D>().freezeRotation= false;
+            rayDown.collider.gameObject.GetComponent<BoxCollider2D>().enabled=false;
+            rayDown.collider.gameObject.GetComponent<EnemyScript>().enabled=false;
+
+        }
+        if(rayDown !=null && rayDown.collider != null && rayDown.distance < 0.9f && rayDown.collider.tag!="enemy")
         {
             isGrounded=true;
-            animator.SetBool("IsJumping",false);
         }
     }
 }

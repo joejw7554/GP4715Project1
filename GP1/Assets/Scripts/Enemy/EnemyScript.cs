@@ -18,6 +18,10 @@ public class EnemyScript : MonoBehaviour
         if(hit.distance <0.7f)
         {
             Flip();
+            if(hit.collider.tag=="Player")
+            {
+                Destroy (hit.collider.gameObject);
+            }
         }
     }
 
