@@ -9,6 +9,11 @@ public class PlayerScript : MonoBehaviour
     public int playerJump;
     private float hozMove;
     public bool isGrounded;
+    public int currentHealth=0;
+    public bool powerUp1=false;
+    public bool powerUp2=false;
+
+    private Rigidbody2D rb;
 
     public Animator animator;
 
@@ -16,11 +21,13 @@ public class PlayerScript : MonoBehaviour
     void Start()
     {
         animator=GetComponent<Animator>();
+        rb=GetComponent<Rigidbody2D>();
+        currentHealth=0;
     }
     void Update()
     {
         PlayerMove();
-        PlayerRaycast();
+        //PlayerRaycast();
     }
 
     void PlayerMove()
@@ -41,16 +48,24 @@ public class PlayerScript : MonoBehaviour
         {
             FlipPlayer();
         }
-
-
         gameObject.GetComponent<Rigidbody2D>().velocity= new Vector2 (hozMove*speed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
     }
 
     void Jump()
     {
         GetComponent<Rigidbody2D>().AddForce (Vector2.up *playerJump);
-        animator.SetBool("IsJumping",true);
         isGrounded=false;
+        animator.SetBool("IsJumping",true);
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        if(collision.gameObject.tag=="ground" ||collision.gameObject.tag=="others")
+        {
+            isGrounded=true;
+            animator.SetBool("IsJumping",false);
+        }
     }
 
     void FlipPlayer()
@@ -59,19 +74,14 @@ public class PlayerScript : MonoBehaviour
         Vector2 localScale= gameObject.transform.localScale;
         localScale.x*=-1;
         transform.localScale=localScale;
-
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-
-    }
-
+  
     void PlayerRaycast ()
     {
         //Todo Fix 
         RaycastHit2D rayUp=Physics2D.Raycast (transform.position, Vector2.up);
-        if(rayUp !=null && rayUp.collider != null && rayUp.distance < 0.9f && rayUp.collider.name=="Randombox")
+        if(rayUp !=null && rayUp.collider != null && rayUp.distance < 0.4f && rayUp.collider.name=="Randombox")
         {
             Destroy(rayUp.collider.gameObject);
 
@@ -80,7 +90,7 @@ public class PlayerScript : MonoBehaviour
 
         RaycastHit2D rayDown=Physics2D.Raycast (transform.position, Vector2.down);
 
-        if(rayDown !=null && rayDown.collider != null && rayDown.distance < 0.9f && rayDown.collider.tag=="enemy")
+        if(rayDown !=null && rayDown.collider != null && rayDown.distance < 0.4f && rayDown.collider.tag=="enemy")
         {
             GetComponent<Rigidbody2D>().AddForce (Vector2.up* 3);
             rayDown.collider.gameObject.GetComponent<Rigidbody2D>().AddForce (Vector2.right * 200);
@@ -90,9 +100,19 @@ public class PlayerScript : MonoBehaviour
             rayDown.collider.gameObject.GetComponent<EnemyScript>().enabled=false;
 
         }
-        if(rayDown !=null && rayDown.collider != null && rayDown.distance < 0.9f && rayDown.collider.tag!="enemy")
+        if(rayDown !=null && rayDown.collider != null && rayDown.distance < 0.4f && rayDown.collider.tag!="enemy")
         {
             isGrounded=true;
         }
     }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag=="powerup1")
+        {
+            
+        }
+    }
+
+
 }

@@ -6,6 +6,11 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
  
+
+    void Start()
+    {
+
+    }
     void Update()
     {
         if(gameObject.transform.position.y<-3)
