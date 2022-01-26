@@ -10,6 +10,7 @@ TagManager:
   - box
   - others
   - end
+  - powerup2
   layers:
   - Default
   - TransparentFX

@@ -10,12 +10,13 @@ public class PlayerScript : MonoBehaviour
     private float hozMove;
     public bool isGrounded;
     public int currentHealth=0;
-    public bool powerUp1=false;
-    public bool powerUp2=false;
+
 
     private Rigidbody2D rb;
 
+    //animator
     public Animator animator;
+
 
 
     void Start()
@@ -27,7 +28,7 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         PlayerMove();
-        //PlayerRaycast();
+        PlayerRaycast();
     }
 
     void PlayerMove()
@@ -108,10 +109,18 @@ public class PlayerScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag=="powerup1")
+        if(collision.tag=="powerup1" &&currentHealth==0)
         {
-            
+            currentHealth=1;
+            animator.SetBool("IsPowerUp",true);
         }
+
+        if(collision.tag=="powerup2" && (currentHealth==1 || currentHealth==0))
+        {
+            currentHealth=2;
+            animator.SetBool("IsPowerUp2",true);
+        }
+        
     }
 
 
