@@ -6,10 +6,16 @@ public class EnemyScript : MonoBehaviour
 {
     public int enemySpeed;
     public int hozMove;
+    
     // Start is called before the first frame update
     
 
     // Update is called once per frame
+
+    void Start()
+    {
+        
+    }
     void Update()
     {
         RaycastHit2D hit=Physics2D.Raycast (transform.position, new Vector2(hozMove,0));
@@ -18,6 +24,7 @@ public class EnemyScript : MonoBehaviour
         if(hit.distance <0.7f)
         {
             Flip();
+            
             if(hit.collider.tag=="Player")
             {
                 Destroy (hit.collider.gameObject);
