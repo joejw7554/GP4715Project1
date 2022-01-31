@@ -11,6 +11,10 @@ public class PlayerScript : MonoBehaviour
     public bool isGrounded;
     public int currentHealth=0;
 
+    public GameObject mushroom;
+    public GameObject flower;
+    public bool itemBoxActive;
+
 
     private Rigidbody2D rb;
 
@@ -24,6 +28,7 @@ public class PlayerScript : MonoBehaviour
         animator=GetComponent<Animator>();
         rb=GetComponent<Rigidbody2D>();
         currentHealth=0;
+        itemBoxActive=false;
     }
     void Update()
     {
@@ -82,9 +87,15 @@ public class PlayerScript : MonoBehaviour
     {
         //Todo Fix 
         RaycastHit2D rayUp=Physics2D.Raycast (transform.position, Vector2.up);
-        if(rayUp !=null && rayUp.collider != null && rayUp.distance < 0.9f && rayUp.collider.name=="Randombox")
+        if(rayUp !=null && rayUp.collider != null && rayUp.distance < 0.9f && rayUp.collider.tag=="randombox" && currentHealth==0)
         {
-            Destroy(rayUp.collider.gameObject);
+            mushroom.SetActive(true);
+            Debug.Log("Hit");
+        }
+
+        else if(rayUp !=null && rayUp.collider != null && rayUp.distance < 0.9f && rayUp.collider.tag=="randombox" && currentHealth==1)
+        {
+            flower.SetActive(true);
         }
 
 
