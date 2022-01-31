@@ -12,6 +12,7 @@ TagManager:
   - end
   - powerup2
   - randombox
+  - coinbox
   layers:
   - Default
   - TransparentFX
