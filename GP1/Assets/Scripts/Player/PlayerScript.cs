@@ -14,8 +14,6 @@ public class PlayerScript : MonoBehaviour
     public GameObject mushroom;
     public GameObject flower;
     public bool itemBoxActive;
-
-
     private Rigidbody2D rb;
 
     //animator
@@ -34,6 +32,7 @@ public class PlayerScript : MonoBehaviour
     {
         PlayerMove();
         PlayerRaycast();
+
     }
 
     void PlayerMove()
@@ -59,7 +58,7 @@ public class PlayerScript : MonoBehaviour
 
     void Jump()
     {
-        GetComponent<Rigidbody2D>().AddForce (Vector2.up *playerJump);
+        rb.AddForce (Vector2.up *playerJump);
         isGrounded=false;
         animator.SetBool("IsJumping",true);
     }
@@ -67,7 +66,7 @@ public class PlayerScript : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
 
-        if(collision.gameObject.tag=="ground" ||collision.gameObject.tag=="others")
+        if(collision.gameObject.tag=="ground" ||collision.gameObject.tag=="others" ||collision.gameObject.tag=="randombox")
         {
             isGrounded=true;
             animator.SetBool("IsJumping",false);
@@ -85,23 +84,20 @@ public class PlayerScript : MonoBehaviour
   
     void PlayerRaycast ()
     {
-        //Todo Fix 
         RaycastHit2D rayUp=Physics2D.Raycast (transform.position, Vector2.up);
-        if(rayUp !=null && rayUp.collider != null && rayUp.distance < 0.9f && rayUp.collider.tag=="randombox" && currentHealth==0)
+        RaycastHit2D rayDown=Physics2D.Raycast (transform.position, Vector2.down);
+
+        if(rayUp!=null && rayUp.collider!=null && rayUp.distance<0.5f && rayUp.collider.tag=="randombox" && currentHealth==0)
         {
-            mushroom.SetActive(true);
-            Debug.Log("Hit");
+            mushroom.SetActive(true);  
         }
 
-        else if(rayUp !=null && rayUp.collider != null && rayUp.distance < 0.9f && rayUp.collider.tag=="randombox" && currentHealth==1)
+        else if(rayUp!=null && rayUp.collider!=null && rayUp.distance<0.5f && rayUp.collider.tag=="randombox" && currentHealth==1)
         {
             flower.SetActive(true);
         }
 
-
-        RaycastHit2D rayDown=Physics2D.Raycast (transform.position, Vector2.down);
-
-        if(rayDown !=null && rayDown.collider != null && rayDown.distance < 0.9f && rayDown.collider.tag=="enemy")
+        if(rayDown.collider != null && rayDown.distance < 0.9f && rayDown.collider.tag=="enemy")
         {
             GetComponent<Rigidbody2D>().AddForce (Vector2.up* 3);
             rayDown.collider.gameObject.GetComponent<Rigidbody2D>().AddForce (Vector2.right * 200);
@@ -111,7 +107,7 @@ public class PlayerScript : MonoBehaviour
             rayDown.collider.gameObject.GetComponent<EnemyScript>().enabled=false;
 
         }
-        if(rayDown !=null && rayDown.collider != null && rayDown.distance < 0.4f && rayDown.collider.tag!="enemy")
+        if(rayDown.collider != null && rayDown.distance < 0.4f && rayDown.collider.tag!="enemy")
         {
             isGrounded=true;
         }
