@@ -65,20 +65,32 @@ public class PlayerScript : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        RaycastHit2D rayUp=Physics2D.Raycast (transform.position, Vector2.up);
+        RaycastHit2D rayLeft=Physics2D.Raycast (transform.position, Vector2.left);
 
         if(collision.gameObject.tag=="ground" ||collision.gameObject.tag=="others" ||collision.gameObject.tag=="randombox")
         {
             isGrounded=true;
             animator.SetBool("IsJumping",false);
         }
+
+        if(collision.gameObject.tag=="enemy" && currentHealth==0 && !rayUp)
+        {
+                GetComponent<Rigidbody2D>().gravityScale=30;
+                GetComponent<BoxCollider2D>().enabled=false;
+                GetComponent<CapsuleCollider2D>().enabled=false;   
+        }
+
+        if(collision.gameObject.tag=="castle")
+        {
+            speed=0;
+        }
     }
 
     void FlipPlayer()
     {
         facingRight=!facingRight;
-        Vector2 localScale= gameObject.transform.localScale;
-        localScale.x*=-1;
-        transform.localScale=localScale;
+        transform.Rotate(0f,180f,0f);
     }
 
   
@@ -86,6 +98,8 @@ public class PlayerScript : MonoBehaviour
     {
         RaycastHit2D rayUp=Physics2D.Raycast (transform.position, Vector2.up);
         RaycastHit2D rayDown=Physics2D.Raycast (transform.position, Vector2.down);
+        
+        
 
         if(rayUp!=null && rayUp.collider!=null && rayUp.distance<0.5f && rayUp.collider.tag=="randombox" && currentHealth==0)
         {
@@ -127,9 +141,7 @@ public class PlayerScript : MonoBehaviour
             currentHealth=2;
             animator.SetBool("IsPowerUp2",true);
             Destroy(collision.gameObject);
-        }
-        
+        }      
     }
-
 
 }
