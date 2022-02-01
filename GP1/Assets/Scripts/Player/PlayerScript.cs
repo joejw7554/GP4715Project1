@@ -68,7 +68,7 @@ public class PlayerScript : MonoBehaviour
         RaycastHit2D rayUp=Physics2D.Raycast (transform.position, Vector2.up);
         RaycastHit2D rayLeft=Physics2D.Raycast (transform.position, Vector2.left);
 
-        if(collision.gameObject.tag=="ground" ||collision.gameObject.tag=="others" ||collision.gameObject.tag=="randombox")
+        if(collision.gameObject.tag=="ground" ||collision.gameObject.tag=="others" ||collision.gameObject.tag=="randombox"||collision.gameObject.tag=="coinbox")
         {
             isGrounded=true;
             animator.SetBool("IsJumping",false);
@@ -141,7 +141,7 @@ public class PlayerScript : MonoBehaviour
             currentHealth=2;
             animator.SetBool("IsPowerUp2",true);
             Destroy(collision.gameObject);
-        }      
+        }  
     }
 
 }
