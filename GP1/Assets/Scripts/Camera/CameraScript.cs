@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraScript : MonoBehaviour
+public class Camerascript : MonoBehaviour
 {
     public GameObject player;
     public float xMin;

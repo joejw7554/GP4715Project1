@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class PlayerScore : MonoBehaviour
+public class Playerscore : MonoBehaviour
 {
     private float timeLeft= 120;
     public int playerScore=0;
